@@ -5,13 +5,15 @@ alert("Welcome to the big time, you are the galaxy player on the Coruscant Round
 
 var understand = prompt("Do you understand how to play? yes or no")
 
-while(understand != "yes"){
-	aalert("Welcome to the big time, you are the galaxy player on the Coruscant Roundballers your team is in the finals against Corellia Spacecadets. You will be picking any numbers between 1 and 100. You need to score 2 points to win the game you have the ball everything is in your hands. You are starting with a Clutch of 40 you must at least end with a Clutch of 30 to not be benched next year and a Clutch of 20 to not be kicked off the team next year. At the end of each guess you'll either be given more Cluth or it'll be taken away.... Good Luck. ")
+if (understand != "yes" || understand != "no") {
+
+	while(understand != "yes"){
+		alert("Welcome to the big time, you are the galaxy player on the Coruscant Roundballers your team is in the finals against Corellia Spacecadets. You will be picking any numbers between 1 and 100. You need to score 2 points to win the game you have the ball everything is in your hands. You are starting with a Clutch of 40 you must at least end with a Clutch of 30 to not be benched next year and a Clutch of 20 to not be kicked off the team next year. At the end of each guess you'll either be given more Cluth or it'll be taken away.... Good Luck. ")
 
 
-		understand = prompt("Do you understand how to play? yes or no")
+			understand = prompt("Do you understand how to play? yes or no")
+	}	
 }
-
 
 var firstNum = prompt("You are a superstar Coruscant Roundfball player and you are known for your clutch 4th quarters. This is game 7 of the finals your team is down by 2 points. You got the ball and there is only 2 seconds on the clock. You dribble down and into the paint, you have 1 guy at the top of the 3 and one time out. Pick a number between 1 and 100 and decide the outcome of the game. ")
 
@@ -27,7 +29,7 @@ if (firstNum >= 66){
 
 	var secondNum = prompt("You are at the free throw line and your heart is racing. You are clutch though so you take a deep breath and focus. You roll the ball a few times over your hand balance and release. Pick another number between one and 100, and let chance decide if you will be eliminated or play on.")
 
-		if (secondNum > 95 && secondNum >= 100) {
+		if (secondNum > 80 && secondNum <= 100) {
 			alert("You truly are clutch, all net no sweat... But you knew you would make it. The crowd jumps up and your teamates rush the floor. You keep that arm up in shooting position for the cameras. This moment deserves a sprite, You just won the finals. ")
 
 		var clutchEarned = 40
@@ -36,7 +38,7 @@ if (firstNum >= 66){
 
 			alert("Your Clutch Points went up by " + clutchEarned + " points you now have " + clutch + " points") 
 
-		}else if(secondNum > 50 && secondNum < 95){
+		}else if(secondNum > 40 && secondNum <= 80){
 			alert("Is there a breeze in the stadium. the ball goes around the rim and  almost stops on the back rolling in. Suddenly almost by a miracle the ball rolls out... Man, talk about bad luck, but at least you got your team to overtime....")
 
 		var clutchEarned = 20
@@ -148,11 +150,11 @@ if (firstNum >= 66){
 	}
 
 	if (clutch >= 60) {
-			alert("You are still as clutch as clutch comes, see you next season")
+			alert("Congratulations you scored the max " + clutch + " points you are still as clutch as clutch comes, see you next season")
 		}else if (clutch < 59 && clutch >= 50){
-			alert("Keep hitting the gym you'll soon be clutch, see you next season")
-		// }else if(clutch < 49 && clutch is > 30){
-		// 	alert("We can fit you in next season, even if on the bench.")
+			alert("Congratulations you scored " + clutch + " keep hitting the gym you'll soon be  very clutch, see you next season")
+		}else if(clutch < 49 && clutch > 30){
+			alert("We can fit you in next season, even if on the bench.")
 		 }else{
-			alert("Your off the team good luck overseas")
+			alert("Take a hike, you only scored " + clutch + " your off the team good luck overseas")
 		}
